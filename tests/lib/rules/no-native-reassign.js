@@ -9,14 +9,14 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-let rule = require("../../../lib/rules/no-native-reassign"),
+const rule = require("../../../lib/rules/no-native-reassign"),
     RuleTester = require("../../../lib/testers/rule-tester");
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-let ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 
 ruleTester.run("no-native-reassign", rule, {
     valid: [

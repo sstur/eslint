@@ -9,15 +9,15 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-let fs = require("fs"),
+const fs = require("fs"),
     path = require("path");
 
 //------------------------------------------------------------------------------
 // Helpers
 //------------------------------------------------------------------------------
 
-let ruleFiles = fs.readdirSync(path.resolve(__dirname, "../lib/rules"));
-let enabledRules = ruleFiles.reduce(function(result, filename) {
+const ruleFiles = fs.readdirSync(path.resolve(__dirname, "../lib/rules"));
+const enabledRules = ruleFiles.reduce(function(result, filename) {
     if (path.extname(filename) === ".js") {
         result[path.basename(filename, ".js")] = "error";
     }
